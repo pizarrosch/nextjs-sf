@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import s from './layout.module.scss';
 import cx from 'clsx';
 import {usePathname} from "next/navigation";
+import {FOOTER_EMAIL} from '../../const';
 
 export default function Layout({ children }: PropsWithChildren) {
 
@@ -32,7 +33,10 @@ export default function Layout({ children }: PropsWithChildren) {
             <Navigation />
           </header>
           <main className={s.main}>{children}</main>
-          <footer className={s.footer}>&copy; 2023 Web studio</footer>
+          <footer className={s.footer}>
+            <div>&copy; 2023 Web studio</div>
+            <a href={`mailto: ${FOOTER_EMAIL}`}>{FOOTER_EMAIL}</a>
+          </footer>
         </div>
       </>
   );
