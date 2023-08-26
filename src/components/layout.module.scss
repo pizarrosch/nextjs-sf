@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  min-height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0 20px;
+}
+
+.main {
+  padding: 20px;
+  flex: 1;
+}
+
+.footer {
+  border-top: 1px solid red;
+  padding: 10px 20px;
+  margin-top: auto;
+}
