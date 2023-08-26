@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import s from './Navigation.module.scss';
 import {usePathname} from 'next/navigation';
-import '../app/globals.css';
+import './globals.css';
 import cx from 'clsx';
 
 export default function Navigation() {
