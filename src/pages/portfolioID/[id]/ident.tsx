@@ -11,8 +11,8 @@ interface ItemProps {
 
 const PHOTOS_API_URL = 'https://jsonplaceholder.typicode.com/photos';
 
-export async function getServerSideProps({ params }: ItemProps) {
-  const url = `${PHOTOS_API_URL}/${params.id}`
+export async function getServerSideProps({ portfolioItem }: ItemProps) {
+  const url = `${PHOTOS_API_URL}/${portfolioItem.id}`
   const { data } = await axios.get<PortfolioItem[]>(url);
 
   return {
