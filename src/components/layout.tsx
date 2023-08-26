@@ -1,14 +1,9 @@
-'use client'
-
 import { PropsWithChildren } from "react";
 import Link from 'next/link';
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
 import s from './layout.module.scss';
-import './globals.css';
-import {useRouter} from "next/router";
 import cx from 'clsx';
-import './globals.css';
 import {usePathname} from "next/navigation";
 
 export default function Layout({ children }: PropsWithChildren) {

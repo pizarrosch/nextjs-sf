@@ -1,5 +1,3 @@
-'use client'
-
 import Layout from "@/components/layout";
 import {useEffect} from "react";
 import {useRouter} from "next/router";
