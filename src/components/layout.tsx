@@ -1,10 +1,20 @@
+'use client'
+
 import { PropsWithChildren } from "react";
+import Link from 'next/link';
 import Head from "next/head";
 import Navigation from "@/components/Navigation";
 import s from './layout.module.scss';
 import '../app/globals.css';
+import {useRouter} from "next/router";
+import cx from 'clsx';
+import '../app/globals.css';
+import {usePathname} from "next/navigation";
 
 export default function Layout({ children }: PropsWithChildren) {
+
+    const pathname = usePathname();
+
   return (
       <>
         <Head>
@@ -16,7 +26,14 @@ export default function Layout({ children }: PropsWithChildren) {
 
         <div className={s.container}>
           <header className={s.header}>
-            <div>Logo</div>
+                  <div className={cx (
+                      s.logo,
+                      {disabled: pathname === "/"}
+                  )}>
+                      <Link href={'/'}>
+                        WEBSTUDIO
+                      </Link>
+                  </div>
             <Navigation />
           </header>
           <main className={s.main}>{children}</main>

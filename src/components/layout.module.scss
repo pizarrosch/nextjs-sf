@@ -11,12 +11,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0 20px;
+  padding: 0 20px;
 }
 
 .main {
   padding: 20px;
   flex: 1;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  color: red;
+  transition: opacity 400ms;
+  user-select: none;
+
+    a {
+      text-decoration: none;
+    }
+      a:visited {
+        color: red;
+      }
+}
+
+.logo:hover {
+  opacity: 0.3;
 }
 
 .footer {
