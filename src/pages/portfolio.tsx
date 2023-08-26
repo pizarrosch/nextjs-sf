@@ -4,6 +4,7 @@ import s from './portfolio.module.scss';
 import Image from "next/image";
 import {useRouter} from "next/router";
 import Item from "@/pages/portfolioID/[id]/ident";
+import Link from 'next/link';
 
 export interface PortfolioItem {
     id: number;
@@ -27,7 +28,6 @@ export default function Portfolio() {
             .then(response => response.json())
             .then((data) => {
                 const slicedData = data.slice(0, 7);
-                console.log(slicedData)
                 setItems([["Корпоратив", slicedData]]);
             })
             .catch(error => console.log(error))
@@ -57,10 +57,12 @@ export default function Portfolio() {
                                     <h2>{group[0]}</h2>
                                     <div className={s.listGroup}>
                                         {group[1].map(({id, title, thumbnailUrl, url}) => {
-                                            return <div key={id} className={s.groupItem} onClick={() => router.push(`/portfolioID/${id}/ident`)}>
-                                                <Image src={thumbnailUrl} alt={title} width={150} height={150}/>
-                                                <h3>{title}</h3>
-                                            </div>
+                                            return (
+                                              <div key={id} className={s.groupItem} onClick={() => router.push(`/portfolioID/${id}/ident`)}>
+                                                  <Image src={thumbnailUrl} alt={title} width={150} height={150}/>
+                                                  <h3>{title}</h3>
+                                              </div>
+                                              )
                                         })}
                                     </div>
                                 </div>
