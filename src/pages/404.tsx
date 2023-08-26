@@ -8,7 +8,7 @@ export default function Error() {
 
     useEffect(() => {
         if (financials) {
-            router.push('/financials')
+            router.push('/portfolio')
         } else if (about) {
             router.push('/about')
         } else if (contacts) {

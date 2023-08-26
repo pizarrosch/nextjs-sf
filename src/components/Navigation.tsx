@@ -22,13 +22,13 @@ export default function Navigation() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contacts">
-                            Контакты
+                        <Link href="/portfolio">
+                            Portfolio
                         </Link>
                     </li>
                     <li>
-                        <Link href="/financials">
-                            Finance
+                        <Link href="/contacts">
+                            Контакты
                         </Link>
                     </li>
                 </ul>
